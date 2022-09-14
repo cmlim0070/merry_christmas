@@ -1,0 +1,140 @@
+
+@font-face {
+  font-family: 개봉박두;
+  src: url('C:\Users\user\Documents\GitHub\Web-Study\Chaemin\font\Rix개봉박두B.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 좋은사랑일기;
+  src: url('C:\Users\user\Documents\GitHub\Web-Study\Chaemin\font\좋은_사랑일기체.ttf') format('truetype');
+}
+
+body{
+  background-color: rgb(34, 34, 34);
+  color: whitesmoke;
+  font-family: 좋은사랑일기;
+  margin: 0px;
+}
+h1 {
+  font-family: 개봉박두;
+  font-size: 350%;
+  text-align:center;
+  color: rgb(185, 17, 17);
+  margin: 0px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+h1 span{
+  color: rgb(29, 78, 46);
+}
+a{
+  color: black;
+  text-decoration: none;
+}
+ol{
+  width:100px;
+  margin:0px;
+  padding:20px;
+}
+#container{
+  display: grid;
+  width: 700px;
+  justify-content: center;
+  align-items: center;
+  border: 3px solid rgb(255, 255, 255);
+  margin: 0px auto;
+}
+#grid{
+  display: grid;
+  grid-template-columns: 1fr 9fr;
+}
+#grid #index{
+  border-right: 1px solid rgb(255, 255, 255);
+}
+#grid ol{
+  padding-left: 33px;
+}
+#grid #article{
+  padding-left: 25px;
+}
+a, a:visited, a:hover, a:active {
+  color: inherit;
+}
+
+@media(max-width:700px){
+  #container{
+    display: block;
+    margin: 0 auto;
+    border: none;
+  }
+  #grid{
+    display: block;
+  }
+  /* #grid #index{
+   
+  }
+  ol{
+    
+  }
+  h1 {
+    
+  } */
+}
+
+/* 
+$d: 70;      // density
+$w: 600;     // grid size
+$s: 3s;       // speed
+
+// Generate the snow image using radial gradients
+$grad: ();
+@for $i from 0 to $d {
+  $v: random(4) + 2;
+  $a: random(5) * .1 + .5;
+  $grad: $grad, radial-gradient(
+      $v+px $v+px at
+      (random($w - $v * 2) + $v)+px
+      (random($w - $v * 2) + $v)+px, 
+      rgba(255,255,255,$a) 50%,
+      rgba(0,0,0,0)
+  ) !global;
+}
+
+// The CSS
+html {
+  height: 100%;
+  background: linear-gradient(#123 30%, #667);
+  overflow: hidden;
+}
+.snow, .snow:before, .snow:after {
+  position: absolute;
+  top: -$w + px;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-image: $grad;
+  background-size: $w + px $w + px;
+  animation: snow $s linear infinite;
+  content: "";
+}
+.snow:after {
+  margin-left: -$w/3 + px;
+  opacity: .4;
+  animation-duration: $s*2;
+  animation-direction: reverse;
+  filter: blur(3px);
+}
+.snow:before {
+  animation-duration: $s*3;
+  animation-direction: reverse;
+  margin-left: -$w/2 + px;
+  opacity: .65;
+  filter: blur(1.5px);
+}
+@keyframes snow {
+  to {
+    transform: translateY($w + px);
+  }
+} */
